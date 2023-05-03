@@ -16,6 +16,6 @@ function flip (id) {
 }
 
 document.getElementById("form").addEventListener("submit", function(event) {
-  alert("Permintaan berhasil dikirim! Terimakasih ^_^"); document.getElementById("form").reset();
+document.getElementById("form").reset();
 event.preventDefault();
 });

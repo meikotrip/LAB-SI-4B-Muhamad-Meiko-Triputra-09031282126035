@@ -4,7 +4,13 @@ body {
 }
 
 header {
+  position: fixed;
+  width: 100%;
   background-color: blanchedalmond;
+}
+
+.title {
+    font-family: 'Poppins', sans-serif;
 }
 
 .nav a:hover {
@@ -17,11 +23,47 @@ header {
   background-color: blanchedalmond;
 }
 
+#backtop {
+  display: inline-block;
+  background-color: #ffc107;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#backtop::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#backtop:hover {
+  cursor: pointer;
+  background-color: #000;
+}
+#backtop:active {
+  background-color: #555;
+}
+#backtop.show {
+  opacity: 1;
+  visibility: visible;
+}
+
 /* Homepage */
 .homepage {
     display: flex;
     justify-content: space-around;
-    padding: 10% 10%;
 }
 
 .home-desc {
@@ -40,7 +82,7 @@ header {
 }
 
 .desc .subhead {
-    color:#ff4c29;
+    color:#000000;
     font-style: italic;
 }
 
@@ -53,7 +95,7 @@ header {
 
 .desc .thin-head {
     margin: -10px 0px 20px;
-    color: #989898;
+    color: #ffc107;
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
     font-weight:lighter;
@@ -109,7 +151,7 @@ a h1.sub-header:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 1% 5% 15%;
+    margin: 1% 5% 10%;
 }
 
 .experience {
@@ -277,6 +319,11 @@ a h1.sub-header:hover {
     font-family: "Poppins", "sans-serif";
 }
 
+warn {
+    font-size: 0.75rem;
+    font-family: "Poppins", "sans-serif";
+}
+
 .space {
     margin: 1% 0;
 }
@@ -311,7 +358,10 @@ footer a {
     }
     .homepage {
         flex-wrap: wrap;
-        padding: 20% 5% 50%;
+        padding: 30% 5%;
+    }
+    .aboutme, .myPo, .myContact {
+        padding: 30% 5% 15%;
     }
     .home-blob {
         width:275px;
@@ -332,13 +382,10 @@ footer a {
         margin: -7px 0px 10px;
     }
     .desc .info-p {
-        margin: 0 1% 10%;
+        margin: 0 1% 5%;
     }
     p, .hub-btn {
         font-size: 13.5px;
-    }
-    .container-about, .container-portfolio {
-        margin: 0 0 50%
     }
     .container-contact {
         margin-left: 5%;
@@ -392,7 +439,10 @@ footer a {
         width: 100%;
     }
     .homepage {
-        padding: 23% 5%;
+        padding: 40% 5% 30%;
+    }
+    .aboutme, .myPo, .myContact {
+      padding: 20% 5% 10%;
     }
     .home-blob {
         width:240px;
@@ -465,7 +515,10 @@ footer a {
         width: 100%;
     }
     .homepage {
-        padding: 17.5% 5%;
+        padding: 27% 5% 17%;
+    }
+    .aboutme, .myPo, .myContact {
+      padding: 20% 5% 5%;
     }
     .home-blob {
         width:315px;
@@ -535,8 +588,8 @@ footer a {
         justify-content: end;
         width: 60%;
     }
-    .homepage {
-        padding: 17.5% 5%;
+    .homepage, .aboutme, .myPo, .myContact {
+        padding: 20% 5% 5%;
     }
     .home-blob {
         width:425px;
@@ -602,7 +655,7 @@ footer a {
         justify-content: end;
         width: 60%;
     }
-    .homepage {
+    .homepage, .aboutme, .myPo, .myContact {
         padding: 10%;
     }
     .home-blob {
