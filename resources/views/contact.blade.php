@@ -30,7 +30,7 @@
         <p class="cap-header light">Untuk mengetahui dan mencari informasi lebih lanjut tentang Saya. <br> Anda dapat mengisi form yang telah tersedia di bawah!</p>
           
         <div class="container-contact">
-    <form id="form" data-sb-form-api-token="bf7f1a64-7f1e-4031-8c22-82c26a5bb064">
+    <form id="contactForm" data-sb-form-api-token="bf7f1a64-7f1e-4031-8c22-82c26a5bb064">
         <div class="ibox">
             <label class="form-label" for="nama">Nama</label>
             <input class="form-control" id="nama" type="text" data-sb-validations="required" />
@@ -40,7 +40,7 @@
             <label class="form-label" for="email">Email</label>
             <input class="form-control" id="email" type="email" data-sb-validations="required,email" />
             <div class="invalid-feedback" data-sb-feedback="email:required">Email is required.</div>
-            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid please use '@'.</div>
         </div>
         <div class="ibox">
             <label class="form-label" for="message">Message</label>
@@ -53,8 +53,8 @@
         <div class="d-none" id="submitErrorMessage">
             <div class="text-center text-danger font-weight-bold mb-3">Error sending message!</div>
         </div>
-        <div class="d-grid">
-            <button class="hub-btn bg-warning text-dark space disabled" id="submitButton" type="submit">Kirim Pesan &ensp;<i class="fa-solid fa-paper-plane"></i></button>
+        <div class="d-grid mt-3">
+            <button class="btn btn-warning disabled" id="submitButton" type="submit">Kirim Pesan &ensp;<i class="fa-solid fa-paper-plane"></i></button>
         </div>
     </form>
 </div>
@@ -66,8 +66,7 @@
         </p>
     </footer>
     <div class="stripped bg-warning"> </div>
-
+    </body>
     <script src="js/script.js"></script>
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
 </html>

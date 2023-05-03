@@ -15,7 +15,7 @@ function flip (id) {
     }
 }
 
-document.getElementById("form").addEventListener("submit", function(event) {
-document.getElementById("form").reset();
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+document.getElementById("contactForm").reset();
 event.preventDefault();
 });
